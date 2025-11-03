@@ -24,7 +24,7 @@ export default function AssociationContactModal({
   title = 'Contacter PoC Innovation',
   organizationName = 'PoC Innovation',
   email = 'contact@poc-innovation.fr',
-  linkedinUrl = 'https://linkedin.com/company/poc-innovation',
+  linkedinUrl = 'https://www.linkedin.com/company/pocinnovation',
   linkedinLabel = 'PoC Innovation'
 }: AssociationContactModalProps) {
   const handleBackdropClick = (e: React.MouseEvent) => {
