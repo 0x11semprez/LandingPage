@@ -14,7 +14,7 @@ function OurPoles() {
     <div className='py-10 px-4 md:mt-25'>
       <div className='container mx-auto max-w-7xl relative z-10 flex flex-col items-center justify-center text-center'>
         <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8'>
-          Nos Pôles
+          Our Poles
         </h2>
 
         <div className='w-full mt-6 sm:mt-8'>
@@ -64,7 +64,7 @@ function OurPoles() {
                     </svg>
                   </div>
                 )}
-                title='Intelligence artificielle'
+                title='Artificial Intelligence'
                 description='Machine Learning, LLM, NLP  . . .'
               />
             </div>
@@ -143,8 +143,8 @@ function OurPoles() {
                     </svg>
                   </div>
                 )}
-                title='Cybersécurité'
-                description='Virus, RAT, outils de défense  . . .'
+                title='Cybersecurity'
+                description='Viruses, RATs, defense tools  . . .'
               />
             </div>
           </div>
@@ -156,7 +156,7 @@ function OurPoles() {
             window.location.href = '/innovation'
           }}
         >
-          En savoir plus
+          Learn more
         </GlassyButton>
       </div>
     </div>

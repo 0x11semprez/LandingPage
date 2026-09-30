@@ -49,7 +49,7 @@ export default function InnovationPage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            A propos de nous
+            About us
           </motion.h1>
         </div>
         <motion.div
@@ -62,10 +62,10 @@ export default function InnovationPage() {
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
         >
-          PoC Innovation est une communauté de développeurs passionnés qui développent des projets
-          open-source, organise et participe à des évènements dans toute la France. Organisée en pôles
-          d'expertise, l'association fonctionne par vagues de projets de 6 mois pour favoriser la montée en
-          compétence, la collaboration, et l'innovation.
+          PoC Innovation is a community of passionate developers who build open-source
+          projects and organize and take part in events all over France. Organized into
+          expertise poles, the association runs in 6-month project waves to foster skill
+          growth, collaboration, and innovation.
         </motion.div>
         <motion.div
           initial={{ y: 30, opacity: 0 }}

@@ -17,7 +17,7 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
       id: 'mev-tracker',
       title: 'MEV Tracker',
       description:
-        'Un programme qui analyse les transactions en attente sur la blockchain Ethereum et qui peut déterminer si elles ont été émises par un bot. Il est basé sur un modèle d’intelligence artificielle entraîné à détecter les transactions émises par des bots.',
+        'A program that analyzes pending transactions on the Ethereum blockchain and determines whether they were sent by a bot. It relies on an AI model trained to detect bot-issued transactions.',
       tools: ['PyTorch', 'NumPy', 'Python', 'Go'],
       contributors: [
         'Alexandre Grare',
@@ -31,7 +31,7 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
       id: 'dao',
       title: 'Superfluid-DAO',
       description:
-        'Superfluid DAO permet aux utilisateurs de créer et d’interagir avec une DAO où la participation est essentielle. En utilisant le protocole Superfluid, les utilisateurs doivent s’impliquer activement, faute de quoi ils risquent de perdre des tokens. Cela encourage une implication active et une gouvernance participative au sein de la communauté.',
+        'Superfluid DAO lets users create and interact with a DAO where participation is essential. Using the Superfluid protocol, users must stay actively involved or risk losing tokens. This encourages active involvement and participatory governance within the community.',
       tools: ['Solidity', 'Foundry'],
       contributors: ['Mehdi Djendar', 'mounia ARJDAL', 'Lyam Gomès', 'Martin Saldinger'],
       heroImage: { src: '/p2p/superfluid-dao.png', alt: 'Superfluid DAO hero' },
@@ -41,7 +41,7 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
       id: 'price-sensor',
       title: 'Price Sensor',
       description:
-        'Price sensor est une implémentation d’un capteur de prix pour le protocole Mangrove. Sa nature abstraite lui permet d’être facilement intégré dans différents types d’offres intelligentes.',
+        'Price Sensor is a price sensor implementation for the Mangrove protocol. Its abstract design makes it easy to integrate into different kinds of smart offers.',
       tools: ['Solidity', 'Mangrove'],
       contributors: ['Martin Saldinger', 'Nathan Flattin', 'Ismaël Fall'],
       heroImage: { src: '/p2p/price-sensor.png', alt: 'NFT Marketplace hero' },
@@ -51,7 +51,7 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
       id: 'poc-ether',
       title: 'PoCEther',
       description:
-        'PoCEther est une plateforme de challenges en sécurité dédiée à la blockchain. Elle permet aux utilisateurs d’explorer et de résoudre des exercices pratiques couvrant différentes vulnérabilités et attaques possibles sur des smart contracts.',
+        'PoCEther is a blockchain security challenge platform. It lets users explore and solve hands-on exercises covering various vulnerabilities and attacks on smart contracts.',
       tools: ['Solidity', 'Truffle', 'React'],
       contributors: ['Lucas Louis', 'Matéo Viel'],
       heroImage: { src: '/p2p/pocether.png', alt: 'Bridge Protocol hero' },
@@ -64,42 +64,42 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
       {/* Mobile: single column */}
       <div className='grid grid-cols-1 gap-4 md:hidden px-4'>
         <ProfileCard
-          name='Aurelien Demeusy et Jules Lordet'
-          role='Responsables Blockchain'
+          name='Aurelien Demeusy and Jules Lordet'
+          role='Blockchain Leads'
           imageSrc='/p2p/p2p_respo.png'
-          imageAlt='Aurelien Demeusy et Jules Lordet, Responsables Blockchain'
+          imageAlt='Aurelien Demeusy and Jules Lordet, Blockchain Leads'
           onContactClick={onOpenContactModal}
           priority={isPriority}
         />
         <StatsCard
           number='25+'
-          title='Projets complétés'
-          description='Nos membres développent des dApps open-source : protocoles DeFi, crowdfunding, outils DAO ou stockage décentralisé.'
+          title='Completed projects'
+          description='Our members build open-source dApps: DeFi protocols, crowdfunding, DAO tools and decentralized storage.'
         />
         <StatsCard
           number='75+'
-          title='Workshops de découverte animés'
-          description='Des workshops couvrant toutes les bases : Ethereum, smart contracts en Solidity, gestion de tokens, DAOs, sécurité et interactions on-chain.'
+          title='Introductory workshops held'
+          description='Workshops covering all the basics: Ethereum, Solidity smart contracts, token management, DAOs, security and on-chain interactions.'
         />
         <EventImageCard
           imageSrc='/p2p/ethglobal.jpg'
           imageAlt='Hackathon ETHGlobal Cannes'
           title='Hackathon ETHGlobal Cannes'
-          date='4 Juillet 2025'
+          date='July 4, 2025'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/p2p/haks.jpg'
           imageAlt='Hackathon Haks'
           title='Hackathon Haks'
-          date='12 Mai 2023'
+          date='May 12, 2023'
           priority={isPriority}
         />
         <LargeEventCard
           imageSrc='/p2p/krypto-tour.png'
-          imageAlt='Salon Krypto Tour Lyon'
-          title='Salon Krypto Tour Lyon'
-          date='11 octobre 2024'
+          imageAlt='Krypto Tour Lyon Fair'
+          title='Krypto Tour Lyon Fair'
+          date='October 11, 2024'
           priority={isPriority}
         />
       </div>
@@ -109,10 +109,10 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
         {/* Profile Card spans 2 rows */}
         <div className='row-span-2'>
           <ProfileCard
-            name='Aurelien Demeusy et Jules Lordet'
-            role='Responsables Blockchain'
+            name='Aurelien Demeusy and Jules Lordet'
+            role='Blockchain Leads'
             imageSrc='/p2p/p2p_respo.png'
-            imageAlt='Aurelien Demeusy et Jules Lordet, Responsables Blockchain'
+            imageAlt='Aurelien Demeusy and Jules Lordet, Blockchain Leads'
             onContactClick={onOpenContactModal}
           />
         </div>
@@ -120,13 +120,13 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
         {/* Right column cards */}
         <StatsCard
           number='25+'
-          title='Projets complétés'
-          description='Nos membres développent des dApps open-source : protocoles DeFi, crowdfunding, outils DAO ou stockage décentralisé.'
+          title='Completed projects'
+          description='Our members build open-source dApps: DeFi protocols, crowdfunding, DAO tools and decentralized storage.'
         />
         <StatsCard
           number='75+'
-          title='Workshops de découverte animés'
-          description='Des workshops couvrant toutes les bases : Ethereum, smart contracts en Solidity, gestion de tokens, DAOs, sécurité et interactions on-chain.'
+          title='Introductory workshops held'
+          description='Workshops covering all the basics: Ethereum, Solidity smart contracts, token management, DAOs, security and on-chain interactions.'
         />
 
         {/* Event Cards in bottom row */}
@@ -134,14 +134,14 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
           imageSrc='/p2p/ethglobal.jpg'
           imageAlt='Hackathon ETHGlobal Cannes'
           title='Hackathon ETHGlobal Cannes'
-          date='4 Juillet 2025'
+          date='July 4, 2025'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/p2p/haks.jpg'
           imageAlt='Hackathon Haks'
           title='Hackathon Haks'
-          date='12 Mai 2023'
+          date='May 12, 2023'
           priority={isPriority}
         />
 
@@ -149,9 +149,9 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
         <div className='col-span-2'>
           <LargeEventCard
             imageSrc='/p2p/krypto-tour.png'
-            imageAlt='Salon Krypto Tour Lyon'
-            title='Salon Krypto Tour Lyon'
-            date='11 octobre 2024'
+            imageAlt='Krypto Tour Lyon Fair'
+            title='Krypto Tour Lyon Fair'
+            date='October 11, 2024'
             priority={isPriority}
           />
         </div>
@@ -162,10 +162,10 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
         {/* Profile Card - Column 1 */}
         <div className='col-span-1'>
           <ProfileCard
-            name='Aurelien Demeusy et Jules Lordet'
-            role='Responsables Blockchain'
+            name='Aurelien Demeusy and Jules Lordet'
+            role='Blockchain Leads'
             imageSrc='/p2p/p2p_respo.png'
-            imageAlt='Aurelien Demeusy et Jules Lordet, Responsables Blockchain'
+            imageAlt='Aurelien Demeusy and Jules Lordet, Blockchain Leads'
             onContactClick={onOpenContactModal}
           />
         </div>
@@ -174,13 +174,13 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
         <div className='col-span-1 grid grid-rows-2 gap-4 2xl:gap-6'>
           <StatsCard
             number='25+'
-            title='Projets complétés'
-            description='Nos membres développent des dApps open-source : protocoles DeFi, crowdfunding, outils DAO ou stockage décentralisé.'
+            title='Completed projects'
+            description='Our members build open-source dApps: DeFi protocols, crowdfunding, DAO tools and decentralized storage.'
           />
           <StatsCard
             number='75+'
-            title='Workshops de découverte animés'
-            description='Des workshops couvrant toutes les bases : Ethereum, smart contracts en Solidity, gestion de tokens, DAOs, sécurité et interactions on-chain.'
+            title='Introductory workshops held'
+            description='Workshops covering all the basics: Ethereum, Solidity smart contracts, token management, DAOs, security and on-chain interactions.'
           />
         </div>
 
@@ -190,14 +190,14 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
             imageSrc='/p2p/ethglobal.jpg'
             imageAlt='Hackathon ETHGlobal Cannes'
             title='Hackathon ETHGlobal Cannes'
-            date='4 Juillet 2025'
+            date='July 4, 2025'
             priority={isPriority}
           />
           <EventImageCard
             imageSrc='/p2p/haks.jpg'
             imageAlt='Hackathon Haks'
             title='Hackathon Haks'
-            date='12 Mai 2023'
+            date='May 12, 2023'
             priority={isPriority}
           />
         </div>
@@ -206,9 +206,9 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
         <div className='col-span-1'>
           <LargeEventCard
             imageSrc='/p2p/krypto-tour.png'
-            imageAlt='Salon Krypto Tour Lyon'
-            title='Salon Krypto Tour Lyon'
-            date='11 octobre 2024'
+            imageAlt='Krypto Tour Lyon Fair'
+            title='Krypto Tour Lyon Fair'
+            date='October 11, 2024'
             priority={isPriority}
           />
         </div>

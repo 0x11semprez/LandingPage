@@ -17,7 +17,7 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
       id: 'sveno',
       title: 'Sveno',
       description:
-        'Un outil permettant de convertir n\'importe quelle application React JS en application Svelte. Sveno vise à devenir un outil puissant capable de transpiler des projets complets et d\'aider les développeurs.',
+        'A tool that converts any React JS application into a Svelte application. Sveno aims to become a powerful tool able to transpile full projects and help developers.',
       tools: ['Python', 'JS', 'Regex'],
       contributors: [
         'Allan Deleve',
@@ -32,7 +32,7 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
       id: 'asyncFlow',
       title: 'AsyncFlow',
       description:
-        'Une librairie JavaScript pour créer des tâches serverless sur le cloud à l\'intérieur de votre code qui prend en charge Node, Python, Java, Ruby et Go.',
+        'A JavaScript library to create serverless cloud tasks right inside your code, supporting Node, Python, Java, Ruby and Go.',
       tools: ['Typescript', 'SWC', 'AWS Lambda'],
       contributors: ['Pierre Riss', 'Loan Riyanto', 'Laurent Gonzalez'],
       heroImage: { src: '/soft/asyncflow.png', alt: 'AsyncFlow hero' },
@@ -42,9 +42,9 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
       id: 'ipc',
       title: 'InterPlanetaryCloud',
       description:
-        'InterPlanetaryCloud est une plateforme web qui permet un accès simple à un système de stockage de fichiers décentralisé et chiffré ainsi qu‘à du cloud computing avec le déploiement de programmes avec les VM d‘Aleph.',
+        'InterPlanetaryCloud is a web platform giving simple access to decentralized, encrypted file storage and to cloud computing, deploying programs on Aleph VMs.',
       tools: ['Typescript', 'Aleph', 'IPFS'],
-      contributors: ['Lucas Louis', 'Reza Rahemtola', 'Adrien Fort', 'Et beaucoup d\'autres !'],
+      contributors: ['Lucas Louis', 'Reza Rahemtola', 'Adrien Fort', 'And many more!'],
       heroImage: { src: '/soft/ipc.png', alt: 'InterPlanetaryCloud hero' },
       repoUrl: 'https://github.com/PoCInnovation/InterPlanetaryCloud',
     },
@@ -52,7 +52,7 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
       id: 'dagviz',
       title: 'DagViz',
       description:
-        'DagViz affiche toutes les informations relatives aux définitions d\'un programme CUE et à ses dépendances via les DAG, ce qui conduit souvent à des bugs, des dépendances circulaires et des schémas non optimisés.',
+        'DagViz displays all the information about a CUE program\'s definitions and their dependencies as DAGs, which often reveal bugs, circular dependencies and unoptimized schemas.',
       tools: ['CUE', 'Typescript', 'Go'],
       contributors: ['Ismaël Fall', 'Florian Lauch', 'Adrien Fort'],
       heroImage: { src: '/soft/dagviz.png', alt: 'DabViz hero' },
@@ -65,42 +65,42 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
       {/* Mobile: single column */}
       <div className='grid grid-cols-1 gap-4 md:hidden px-4'>
         <ProfileCard
-          name='Laurent Gonzalez et Milo Kowalska'
-          role='Responsables Software'
+          name='Laurent Gonzalez and Milo Kowalska'
+          role='Software Leads'
           imageSrc='/soft/soft_respo.png'
-          imageAlt='Laurent Gonzalez et Milo Kowalska, Responsables Software'
+          imageAlt='Laurent Gonzalez and Milo Kowalska, Software Leads'
           onContactClick={onOpenContactModal}
           priority={isPriority}
         />
         <StatsCard
           number='30+'
-          title='Projets complétés'
-          description="Du SDK serverless à la génération d'API ou la migration front, nos projets explorent les outils et frameworks les plus actuels."
+          title='Completed projects'
+          description="From serverless SDKs to API generation and front-end migration, our projects explore the latest tools and frameworks."
         />
         <StatsCard
           number='100+'
-          title='Workshops de découverte animés'
-          description='Découverte des frameworks les plus utilisés, les différents langages, les bases de données, tests, déploiement et bien plus encore.'
+          title='Introductory workshops held'
+          description='Discover the most used frameworks, languages, databases, testing, deployment and much more.'
         />
         <EventImageCard
           imageSrc='/soft/nasa_hackathon_3.png'
           imageAlt='Hackathon Nasa'
           title='Hackathon Nasa Space apps challenge'
-          date='3 octobre 2021'
+          date='October 3, 2021'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/soft/vivatech.jpg'
-          imageAlt='Salon Vivatech'
-          title='Salon Vivatech'
-          date='22 mai 2024'
+          imageAlt='Vivatech Fair'
+          title='Vivatech Fair'
+          date='May 22, 2024'
           priority={isPriority}
         />
         <LargeEventCard
           imageSrc='/soft/hackathon_facebook.jpeg'
           imageAlt='Hackathon facebook'
           title='Hackathon facebook'
-          date='novembre 2018'
+          date='November 2018'
           priority={isPriority}
         />
       </div>
@@ -110,10 +110,10 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
         {/* Profile Card spans 2 rows */}
         <div className='row-span-2'>
           <ProfileCard
-            name='Laurent Gonzalez et Milo Kowalska'
-            role='Responsables Software'
+            name='Laurent Gonzalez and Milo Kowalska'
+            role='Software Leads'
             imageSrc='/soft/soft_respo.png'
-            imageAlt='Laurent Gonzalez et Milo Kowalska, Responsables Software'
+            imageAlt='Laurent Gonzalez and Milo Kowalska, Software Leads'
             onContactClick={onOpenContactModal}
           />
         </div>
@@ -121,28 +121,28 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
         {/* Right column cards */}
         <StatsCard
           number='30+'
-          title='Projets complétés'
-          description="Du SDK serverless à la génération d'API ou la migration front, nos projets explorent les outils et frameworks les plus actuels."
+          title='Completed projects'
+          description="From serverless SDKs to API generation and front-end migration, our projects explore the latest tools and frameworks."
         />
         <StatsCard
           number='100+'
-          title='Workshops de découverte animés'
-          description='Découverte des frameworks les plus utilisés, les différents langages, les bases de données, tests, déploiement et bien plus encore.'
+          title='Introductory workshops held'
+          description='Discover the most used frameworks, languages, databases, testing, deployment and much more.'
         />
 
         {/* Event Cards in bottom row */}
         <EventImageCard
           imageSrc='/soft/vivatech.jpg'
-          imageAlt='Salon Vivatech'
-          title='Salon Vivatech'
-          date='22 mai 2024'
+          imageAlt='Vivatech Fair'
+          title='Vivatech Fair'
+          date='May 22, 2024'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/soft/nasa_hackathon_3.png'
           imageAlt='Hackathon Nasa'
           title='Hackathon Nasa Space apps challenge'
-          date='3 octobre 2021'
+          date='October 3, 2021'
           priority={isPriority}
         />
 
@@ -152,7 +152,7 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
             imageSrc='/soft/hackathon_facebook.jpeg'
             imageAlt='Hackathon facebook'
             title='Hackathon facebook'
-            date='novembre 2018'
+            date='November 2018'
             priority={isPriority}
           />
         </div>
@@ -163,10 +163,10 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
         {/* Profile Card - Column 1 */}
         <div className='col-span-1'>
           <ProfileCard
-            name='Laurent Gonzalez et Milo Kowalska'
-            role='Responsables Software'
+            name='Laurent Gonzalez and Milo Kowalska'
+            role='Software Leads'
             imageSrc='/soft/soft_respo.png'
-            imageAlt='Laurent Gonzalez et Milo Kowalska, Responsables Software'
+            imageAlt='Laurent Gonzalez and Milo Kowalska, Software Leads'
             onContactClick={onOpenContactModal}
           />
         </div>
@@ -175,13 +175,13 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
         <div className='col-span-1 grid grid-rows-2 gap-4 2xl:gap-6'>
           <StatsCard
             number='30+'
-            title='Projets complétés'
-            description="Du SDK serverless à la génération d'API ou la migration front, nos projets explorent les outils et frameworks les plus actuels."
+            title='Completed projects'
+            description="From serverless SDKs to API generation and front-end migration, our projects explore the latest tools and frameworks."
           />
           <StatsCard
             number='100+'
-            title='Workshops de découverte animés'
-            description='Découverte des frameworks les plus utilisés, les différents langages, les bases de données, tests, déploiement et bien plus encore.'
+            title='Introductory workshops held'
+            description='Discover the most used frameworks, languages, databases, testing, deployment and much more.'
           />
         </div>
 
@@ -191,14 +191,14 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
             imageSrc='/soft/nasa_hackathon_3.png'
             imageAlt='Hackathon Nasa'
             title='Hackathon Nasa Space apps challenge'
-            date='3 octobre 2021'
+            date='October 3, 2021'
             priority={isPriority}
           />
           <EventImageCard
             imageSrc='/soft/vivatech.jpg'
-            imageAlt='Salon Vivatech'
-            title='Salon Vivatech'
-            date='22 mai 2024'
+            imageAlt='Vivatech Fair'
+            title='Vivatech Fair'
+            date='May 22, 2024'
             priority={isPriority}
           />
         </div>
@@ -209,7 +209,7 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
             imageSrc='/soft/hackathon_facebook.jpeg'
             imageAlt='Hackathon facebook'
             title='Hackathon facebook'
-            date='novembre 2018'
+            date='November 2018'
             priority={isPriority}
           />
         </div>

@@ -50,14 +50,14 @@ function GlassyNavbar() {
           <Link href='/' className='cursor-pointer group'>
             <button className='cursor-pointer' type='button'>
               <span className='text-muted-foreground group-hover:text-white group-active:text-white transition-colors duration-200 text-xs sm:text-sm md:text-lg font-medium'>
-                Accueil
+                Home
               </span>
             </button>
           </Link>
           <Link href='/innovation' className='cursor-pointer group'>
             <button className='cursor-pointer' type='button'>
               <span className='text-muted-foreground group-hover:text-white group-active:text-white transition-colors duration-200 text-xs sm:text-sm md:text-lg font-medium mx-1 sm:mx-2 md:mx-4'>
-                Pôles
+                Poles
               </span>
             </button>
           </Link>

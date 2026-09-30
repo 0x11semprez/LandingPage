@@ -58,16 +58,16 @@ function Footer() {
             <GlassyButton
               onClick={() => setIsContactModalOpen(true)}
             >
-              <span className='text-foreground'>Nous contacter</span>
+              <span className='text-foreground'>Contact us</span>
             </GlassyButton>
           </div>
         </div>
 
-        {/* Copyright/mentions légales optionnelles (commentées pour l'instant) */}
+        {/* Optional copyright/legal notice (commented out for now) */}
         {/*
         <div className="mt-8 pt-6 border-t border-foreground/10 text-center">
           <p className="text-sm text-foreground/60">
-            © 2024 PoC. Tous droits réservés.
+            © 2024 PoC. All rights reserved.
           </p>
         </div>
         */}

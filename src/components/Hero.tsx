@@ -69,7 +69,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.6 }}
             />
             <h1 className='text-lg md:text-xl font-semibold text-foreground'>
-              Centre d'Innovation Étudiant
+              Student Innovation Center
             </h1>
             <motion.div
               className='bg-foreground h-[2px] w-6'
@@ -89,10 +89,10 @@ export function Hero() {
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
           >
-            PoC est le premier centre d'innovation français rassemblant les
-            élèves les plus motivés. Nous créons des projets innovant et
-            open-source, avec les technologies de demain, en collaboration avec
-            des entreprises du secteur
+            PoC is the leading French innovation center bringing together the
+            most motivated students. We build innovative, open-source
+            projects with tomorrow's technologies, in collaboration with
+            industry companies
           </motion.p>
 
           <motion.div
@@ -108,7 +108,7 @@ export function Hero() {
             <PoCButton
               onClick={() => setIsContactModalOpen(true)}
             >
-              Nous contacter
+              Contact us
             </PoCButton>
           </motion.div>
         </div>

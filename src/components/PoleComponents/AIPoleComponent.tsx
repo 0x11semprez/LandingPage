@@ -17,7 +17,7 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
       id: 'cyrebro',
       title: 'Cyrebro',
       description:
-        'Assistant de pré-consultation médicale basé sur l\'IA, développé avec l\'Institut de l’Audition et l’Institut Pasteur. Prise d\'information conversationnelle, résumé automatisé et validation de cohérence médicale.',
+        'AI-based medical pre-consultation assistant, developed with the Institut de l’Audition and the Institut Pasteur. Conversational intake, automated summaries and medical consistency checks.',
       tools: ['Python', 'Transformers', 'MedGamma'],
       contributors: [
         'Léandre Ramos',
@@ -32,7 +32,7 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
       id: 'open-zero',
       title: 'Open-Zero',
       description:
-        'Open-Zero est un projet de recherche open source visant à reproduire les méthodes AlphaZero et MuZero de DeepMind pour l’entraînement d’une IA au jeu d’échecs, en s’appuyant sur l’apprentissage par renforcement profond (notamment l’algorithme A3C).',
+        'Open-Zero is an open-source research project that reproduces DeepMind\'s AlphaZero and MuZero methods to train a chess AI, using deep reinforcement learning (notably the A3C algorithm).',
       tools: ['PyTorch', 'Python', 'AC3'],
       contributors: ['Gino Ambigaipalan', 'Jean-Baptiste Debize', 'Nell Fauveau', 'Bogdan Guillemoles'],
       heroImage: { src: '/ai/open-zero.png', alt: 'Open-Zero hero' },
@@ -42,7 +42,7 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
       id: 'infinalys',
       title: 'Infinalys',
       description:
-        'infinalys est une application web de prévision boursière qui combine visualisation des données de marché et prédictions générées par une IA en apprentissage profond. Facile à déployer grâce à Docker, elle offre une interface moderne et interactive pour explorer les tendances financières.',
+        'Infinalys is a stock forecasting web app combining market data visualization with predictions from a deep learning AI. Easy to deploy with Docker, it offers a modern, interactive interface to explore financial trends.',
       tools: ['React', 'Yahoo finance', 'TensorFlow', 'Docker'],
       contributors: ['Alexandre Chetrit', 'Coline Seguret', 'Grégoire Brasseur', 'Robin Christol', 'Paul Monnery'],
       heroImage: { src: '/ai/infinalys.png', alt: 'Infinalys hero' },
@@ -52,7 +52,7 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
       id: 'deep-poc',
       title: 'Deep-PoC',
       description:
-        'Deep-PoC est un outil de détection de deepfakes capable d’identifier les contenus manipulés (images ou vidéos) grâce à l’intelligence artificielle. Il permet d’analyser et de signaler les falsifications visuelles afin de lutter contre la désinformation et les usages malveillants.',
+        'Deep-PoC is a deepfake detection tool that uses AI to identify manipulated content (images or videos). It analyzes and flags visual forgeries to fight disinformation and malicious use.',
       tools: ['Python', 'PyTorch', 'Django', 'Matplotlib'],
       contributors: ['Mikael Vallenet', 'Valentin De Matos', 'Victor Guyot'],
       heroImage: { src: '/ai/deep-poc.png', alt: 'Deep-PoC hero' },
@@ -65,42 +65,42 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
       {/* Mobile: single column */}
       <div className='grid grid-cols-1 gap-4 md:hidden px-4'>
         <ProfileCard
-          name='Manmohit-Singh Lal et Sacha Henneveux'
-          role='Responsables IA'
+          name='Manmohit-Singh Lal and Sacha Henneveux'
+          role='AI Leads'
           imageSrc='/ai/ia_respo.png'
-          imageAlt='Manmohit-Singh Lal et Sacha Henneveux, Responsables IA'
+          imageAlt='Manmohit-Singh Lal and Sacha Henneveux, AI Leads'
           onContactClick={onOpenContactModal}
           priority={isPriority}
         />
         <StatsCard
           number='20+'
-          title='Projets complétés'
-          description="Des modèles d'IA multimodal à la détection de deepfakes. Ces projets mêlent recherche appliquée et innovation technique."
+          title='Completed projects'
+          description="From multimodal AI models to deepfake detection. These projects blend applied research and technical innovation."
         />
         <StatsCard
           number='50+'
-          title='Workshops de découverte animés'
-          description="Des workshops couvrant toutes les notions fondamentales : IA générative, traitement d'image, NLP, apprentissage supervisé et non-supervisé..."
+          title='Introductory workshops held'
+          description="Workshops covering all the fundamentals: generative AI, image processing, NLP, supervised and unsupervised learning..."
         />
         <EventImageCard
           imageSrc='/ai/hackathon-google.jpeg'
           imageAlt='Hackathon Google'
           title='Hackathon Google'
-          date='5 Juillet 2025'
+          date='July 5, 2025'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/ai/siami.jpeg'
-          imageAlt="Salon IA ministère de l'intérieur"
-          title="Salon IA ministère de l'intérieur"
-          date='8 Octobre 2024'
+          imageAlt="AI Fair, French Ministry of the Interior"
+          title="AI Fair, French Ministry of the Interior"
+          date='October 8, 2024'
           priority={isPriority}
         />
         <LargeEventCard
           imageSrc='/ai/mistral-hackathon.jpeg'
           imageAlt='Hackathon Mistral'
           title='Hackathon Mistral'
-          date='19 Avril 2025'
+          date='April 19, 2025'
           priority={isPriority}
         />
       </div>
@@ -110,10 +110,10 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
         {/* Profile Card spans 2 rows */}
         <div className='row-span-2'>
           <ProfileCard
-            name='Manmohit-Singh Lal et Sacha Henneveux'
-            role='Responsables IA'
+            name='Manmohit-Singh Lal and Sacha Henneveux'
+            role='AI Leads'
             imageSrc='/ai/ia_respo.png'
-            imageAlt='Manmohit-Singh Lal et Sacha Henneveux, Responsables IA'
+            imageAlt='Manmohit-Singh Lal and Sacha Henneveux, AI Leads'
             onContactClick={onOpenContactModal}
             priority
           />
@@ -122,28 +122,28 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
         {/* Right column cards */}
         <StatsCard
           number='20+'
-          title='Projets complétés'
-          description="Des modèles d'IA multimodal à la détection de deepfakes. Ces projets mêlent recherche appliquée et innovation technique."
+          title='Completed projects'
+          description="From multimodal AI models to deepfake detection. These projects blend applied research and technical innovation."
         />
         <StatsCard
           number='50+'
-          title='Workshops de découverte animés'
-          description="Des workshops couvrant toutes les notions fondamentales : IA générative, traitement d'image, NLP, apprentissage supervisé et non-supervisé..."
+          title='Introductory workshops held'
+          description="Workshops covering all the fundamentals: generative AI, image processing, NLP, supervised and unsupervised learning..."
         />
 
         {/* Event Cards in bottom row */}
         <EventImageCard
           imageSrc='/ai/siami.jpeg'
-          imageAlt="Salon IA ministère de l'intérieur"
-          title="Salon IA ministère de l'intérieur"
-          date='8 Octobre 2024'
+          imageAlt="AI Fair, French Ministry of the Interior"
+          title="AI Fair, French Ministry of the Interior"
+          date='October 8, 2024'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/ai/hackathon-google.jpeg'
           imageAlt='Hackathon Google'
           title='Hackathon Google'
-          date='5 Juillet 2025'
+          date='July 5, 2025'
           priority={isPriority}
         />
 
@@ -153,7 +153,7 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
             imageSrc='/ai/mistral-hackathon.jpeg'
             imageAlt='Hackathon Mistral'
             title='Hackathon Mistral'
-            date='19 Avril 2025'
+            date='April 19, 2025'
             priority
           />
         </div>
@@ -164,10 +164,10 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
         {/* Profile Card - Column 1 */}
         <div className='col-span-1'>
           <ProfileCard
-            name='Manmohit-Singh Lal et Sacha Henneveux'
-            role='Responsables IA'
+            name='Manmohit-Singh Lal and Sacha Henneveux'
+            role='AI Leads'
             imageSrc='/ai/ia_respo.png'
-            imageAlt='Manmohit-Singh Lal et Sacha Henneveux, Responsables IA'
+            imageAlt='Manmohit-Singh Lal and Sacha Henneveux, AI Leads'
             onContactClick={onOpenContactModal}
             priority
           />
@@ -177,13 +177,13 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
         <div className='col-span-1 grid grid-rows-2 gap-4 2xl:gap-6'>
           <StatsCard
             number='20+'
-            title='Projets complétés'
-            description="Des modèles d'IA multimodal à la détection de deepfakes. Ces projets mêlent recherche appliquée et innovation technique."
+            title='Completed projects'
+            description="From multimodal AI models to deepfake detection. These projects blend applied research and technical innovation."
           />
           <StatsCard
             number='50+'
-            title='Workshops de découverte animés'
-            description="Des workshops couvrant toutes les notions fondamentales : IA générative, traitement d'image, NLP, apprentissage supervisé et non-supervisé..."
+            title='Introductory workshops held'
+            description="Workshops covering all the fundamentals: generative AI, image processing, NLP, supervised and unsupervised learning..."
           />
         </div>
 
@@ -193,14 +193,14 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
             imageSrc='/ai/hackathon-google.jpeg'
             imageAlt='Hackathon Google'
             title='Hackathon Google'
-            date='5 Juillet 2025'
+            date='July 5, 2025'
             priority
           />
           <EventImageCard
             imageSrc='/ai/siami.jpeg'
-            imageAlt="Salon IA ministère de l'intérieur"
-            title="Salon IA ministère de l'intérieur"
-            date='8 Octobre 2024'
+            imageAlt="AI Fair, French Ministry of the Interior"
+            title="AI Fair, French Ministry of the Interior"
+            date='October 8, 2024'
             priority
           />
         </div>
@@ -211,7 +211,7 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
             imageSrc='/ai/mistral-hackathon.jpeg'
             imageAlt='Hackathon Mistral'
             title='Hackathon Mistral'
-            date='19 Avril 2025'
+            date='April 19, 2025'
             priority
           />
         </div>

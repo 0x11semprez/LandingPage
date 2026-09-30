@@ -15,7 +15,7 @@ function Association() {
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
-        Au cœur de l&apos;association
+        At the heart of the association
       </motion.h2>
 
       <div className='mt-6 w-full max-w-7xl'>
@@ -60,30 +60,30 @@ function Association() {
               {[
                 {
                   statText: '25+',
-                  title: 'Membres actifs',
+                  title: 'Active members',
                   description:
-                    'Présent dans plusieurs campus dans toute la France dont en majorité Paris et Lyon.',
+                    'Present on several campuses across France, mainly Paris and Lyon.',
                   delay: 0.8,
                 },
                 {
                   statText: '125+',
-                  title: 'Projets complétés',
+                  title: 'Completed projects',
                   description:
-                    'PoC entreprend de nombreux projets indépendant ou en collaboration avec une entreprise.',
+                    'PoC runs many projects, independently or in collaboration with companies.',
                   delay: 1.0,
                 },
                 {
                   statText: '300+',
-                  title: 'Évenements',
+                  title: 'Events',
                   description:
-                    'A destination d’étudiants et de professionnels dans toute la France.',
+                    'For students and professionals all over France.',
                   delay: 0.8,
                 },
                 {
                   statText: '200+',
-                  title: 'Alumni dans le monde',
+                  title: 'Alumni worldwide',
                   description:
-                    'De start-ups aux géants de la tech comme Google ou Microsoft, nos anciens propagent l’ADN PoC aux quatre coins du globe.',
+                    'From start-ups to tech giants like Google and Microsoft, our alumni spread the PoC DNA all around the globe.',
                   delay: 0.9,
                 },
               ].map(card => (

@@ -114,7 +114,7 @@ export default function AssociationContactModal({
               onClick={onClose}
               className='px-4 py-2 bg-transparent border border-white/30 text-white rounded-lg hover:bg-white/10 hover:border-white/50 transition-all text-xs sm:text-sm'
             >
-              Fermer
+              Close
             </button>
           </div>
         </div>

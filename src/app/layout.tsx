@@ -18,24 +18,24 @@ export const metadata: Metadata = {
   icons: {
     icon: '/poc_icon.png',
   },
-  title: 'PoC - Centre d\'innovation étudiant',
+  title: 'PoC - Student Innovation Center',
   description:
-    'Découvrez notre association étudiante dédiée à l’innovation et à la transformation des idées en projets concrets.',
+    'Discover our student association dedicated to innovation and to turning ideas into concrete projects.',
   openGraph: {
-    title: 'PoC - Centre d\'innovation étudiant',
+    title: 'PoC - Student Innovation Center',
     description:
-      'Découvrez notre association étudiante dédiée à l’innovation et à la transformation des idées en projets concrets.',
+      'Discover our student association dedicated to innovation and to turning ideas into concrete projects.',
     images: ['/logo_poc.png'],
     url: 'https://www.poc-innovation.fr/',
     siteName: 'PoC Innovation',
-    locale: 'fr_FR',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PoC - Centre d\'innovation étudiant',
+    title: 'PoC - Student Innovation Center',
     description:
-      'Découvrez notre association étudiante dédiée à l’innovation et à la transformation des idées en projets concrets.',
+      'Discover our student association dedicated to innovation and to turning ideas into concrete projects.',
     images: ['/logo_poc.png'],
   },
   robots: {
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='fr' className={poppins.variable}>
+    <html lang='en' className={poppins.variable}>
       <body className='font-sans antialiased'>
         <GlassyNavbar />
         {children}

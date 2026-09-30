@@ -14,13 +14,13 @@ import SelectablePoleCard from './SelectablePoleCard'
 const POLES = [
   {
     key: 'ai',
-    title: 'Intelligence artificielle',
-    subtitle: 'Innover avec les données',
+    title: 'Artificial Intelligence',
+    subtitle: 'Innovating with data',
     gradient: 'from-[#5E1265] to-[#AA222B]', // reversed vs icon
     iconBg: 'bg-gradient-to-tr from-[#AA222B] to-[#5E1265]',
     borderColor: 'rgba(255, 0, 123, 0.5)',
     description:
-      'Nous explorons le machine learning, l\'IA générative et plein d\'autres architectures pour créer des outils utiles et innovants.',
+      'We explore machine learning, generative AI and many other architectures to build useful, innovative tools.',
     component: AIPoleComponent,
     contacts: [
       {
@@ -34,7 +34,7 @@ const POLES = [
         linkedinUrl: 'https://www.linkedin.com/in/sacha-henneveux-084052304',
       },
     ],
-    contactTitle: 'Contacter l\'équipe IA',
+    contactTitle: 'Contact the AI team',
     icon: (
       <div className='flex items-center justify-center bg-gradient-to-tr from-[#AA222B] to-[#5E1265] h-14 w-14 rounded-sm'>
         <svg
@@ -57,12 +57,12 @@ const POLES = [
   {
     key: 'software',
     title: 'Software',
-    subtitle: 'Coder pour simplifier',
+    subtitle: 'Coding to simplify',
     gradient: 'from-[#3B1265] to-[#224DAA]',
     iconBg: 'bg-gradient-to-tr from-[#224DAA] to-[#3B1265]',
     borderColor: 'rgba(123, 0, 255, 0.5)',
     description:
-      'Développement web, mobile et desktop : nous construisons des solutions techniques utiles, performantes et open-source.',
+      'Web, mobile and desktop development: we build useful, high-performance, open-source technical solutions.',
     component: SoftwarePoleComponent,
     contacts: [
       {
@@ -76,7 +76,7 @@ const POLES = [
         linkedinUrl: 'https://www.linkedin.com/in/milo-kowalska-6a22472a3/',
       },
     ],
-    contactTitle: 'Contacter l\'équipe Software',
+    contactTitle: 'Contact the team Software',
     icon: (
       <div className='flex items-center justify-center bg-gradient-to-tr from-[#224DAA] to-[#3B1265]  h-14 w-14 rounded-sm'>
         <svg
@@ -99,12 +99,12 @@ const POLES = [
   {
     key: 'blockchain',
     title: 'Blockchain',
-    subtitle: 'Construire le web décentralisé',
+    subtitle: 'Building the decentralized web',
     gradient: 'from-[#12653B] to-[#7C9221]',
     iconBg: 'bg-gradient-to-tr from-[#7C9221] to-[#12653B]',
     borderColor: 'rgba(95, 190, 60, 0.5)',
     description:
-      'Conception d\'apps, smart contracts et protocoles décentralisés sur Ethereum, Layer 2, Solana et plus.',
+      'Design of apps, smart contracts and decentralized protocols on Ethereum, Layer 2, Solana and more.',
     component: P2PPoleComponent,
     contacts: [
       {
@@ -118,7 +118,7 @@ const POLES = [
         linkedinUrl: 'https://www.linkedin.com/in/jules-lordet-9798a12b3/',
       },
     ],
-    contactTitle: 'Contacter l\'équipe Blockchain',
+    contactTitle: 'Contact the team Blockchain',
     icon: (
       <div className='flex items-center justify-center bg-gradient-to-tr from-[#7C9221] to-[#12653B] h-14 w-14 rounded-sm'>
         <svg
@@ -140,13 +140,13 @@ const POLES = [
   },
   {
     key: 'cyber',
-    title: 'Cybersécurité',
-    subtitle: 'Défendre, tester, comprendre',
+    title: 'Cybersecurity',
+    subtitle: 'Defend, test, understand',
     gradient: 'from-[#0F439D] to-[#2D909D]',
     iconBg: 'bg-gradient-to-tr from-[#2D909D] to-[#0F439D]',
     borderColor: 'rgba(0, 102, 255, 0.5)',
     description:
-      'Analyse, pentesting, audit et création d\'outils défensifs pour renforcer la sécurité des systèmes numériques.',
+      'Analysis, pentesting, auditing and defensive tooling to strengthen the security of digital systems.',
     component: CyberPoleComponent,
     contacts: [
       {
@@ -155,7 +155,7 @@ const POLES = [
         linkedinUrl: 'https://www.linkedin.com/company/poc-innovation',
       },
     ],
-    contactTitle: 'Contacter l\'équipe Cybersécurité',
+    contactTitle: 'Contact the team Cybersecurity',
     icon: (
       <div className='flex items-center justify-center bg-gradient-to-tr from-[#2D909D] to-[#0F439D] h-14 w-14 rounded-sm'>
         <svg className='block w-3/4 h-3/4' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -211,7 +211,7 @@ export default function InnovationPoles() {
     const pole = POLES.find(p => p.key === poleKey)
     if (pole && pole.contacts) {
       setModalContent({
-        title: pole.contactTitle || 'Contacter l\'équipe',
+        title: pole.contactTitle || 'Contact the team',
         contacts: [...pole.contacts],
       })
       setIsModalOpen(true)
@@ -337,7 +337,7 @@ export default function InnovationPoles() {
                       <svg className='w-3 h-3' fill='currentColor' viewBox='0 0 24 24'>
                         <path d='M6 4h4v16H6V4zm8 0h4v16h-4V4z' />
                       </svg>
-                      <span>Arrêter changement de pôle</span>
+                      <span>Stop pole rotation</span>
                     </>
                   )
                 : (
@@ -345,7 +345,7 @@ export default function InnovationPoles() {
                       <svg className='w-3 h-3' fill='currentColor' viewBox='0 0 24 24'>
                         <path d='M8 5v14l11-7z' />
                       </svg>
-                      <span>Reprendre changement de pôle</span>
+                      <span>Resume pole rotation</span>
                     </>
                   )}
             </button>

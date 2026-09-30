@@ -23,7 +23,7 @@ export default function MediumEventCard({ imageSrc, imageAlt, title, date, prior
           priority={priority}
           loading={priority ? undefined : 'eager'}
         />
-        {/* Gradient noir de bas en haut pour plus de contraste */}
+        {/* Black bottom-to-top gradient for more contrast */}
         <div className='absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent' />
       </div>
 

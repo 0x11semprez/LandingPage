@@ -29,10 +29,10 @@ function Services() {
           viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          PoC, c'est plus qu'une association.
+          PoC is more than an association.
           {' '}
           <br />
-          C'est votre allié pour tous vos projets.
+          It's your ally for all your projects.
         </motion.h2>
         <motion.p
           className='relative z-10 text-md md:text-lg text-muted-foreground mt-8'
@@ -41,11 +41,10 @@ function Services() {
           viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          PoC évolue et franchit une nouvelle étape ! En plus d'être une
-          association, PoC lance sa branche services pour réaliser vos projets
-          informatiques. Du logiciel à l'application web, notre équipe
-          transforme vos idées en solutions sur mesure avec expertise et
-          créativité.
+          PoC is evolving and taking a new step! On top of being an
+          association, PoC is launching its services branch to build your IT
+          projects. From software to web apps, our team turns your ideas
+          into tailored solutions with expertise and creativity.
         </motion.p>
         <motion.div
           className='relative z-10 flex justify-center mt-8'
@@ -58,7 +57,7 @@ function Services() {
             bgColor='bg-black'
             onClick={() => setIsContactModalOpen(true)}
           >
-            <p className='text-foreground'>En savoir plus</p>
+            <p className='text-foreground'>Learn more</p>
           </PoCButton>
         </motion.div>
       </motion.div>
@@ -66,7 +65,7 @@ function Services() {
       <AssociationContactModal
         isOpen={isContactModalOpen}
         onClose={() => setIsContactModalOpen(false)}
-        title='Contacter PoC Services'
+        title='Contact PoC Services'
         organizationName='PoC Services'
         email='pierre.lissope@poc-services.fr'
         linkedinUrl='https://www.linkedin.com/company/poc-services'

@@ -23,7 +23,7 @@ type FeaturedProjectsProps = {
   projects: FeaturedProject[]
 }
 
-export default function FeaturedProjects({ title = 'Les projets phares de notre pôle', projects }: FeaturedProjectsProps) {
+export default function FeaturedProjects({ title = 'Our pole\'s flagship projects', projects }: FeaturedProjectsProps) {
   const [activeId, setActiveId] = useState(projects[0]?.id)
 
   const active = useMemo(() => projects.find(p => p.id === activeId) ?? projects[0], [activeId, projects])
@@ -95,7 +95,7 @@ export default function FeaturedProjects({ title = 'Les projets phares de notre 
               </p>
 
               <div className='mt-2'>
-                <p className='text-l text-foreground mb-2'>Outils utilisées</p>
+                <p className='text-l text-foreground mb-2'>Tools used</p>
                 <div className='flex flex-wrap gap-2'>
                   {active.tools.map(tool => (
                     <span
@@ -109,7 +109,7 @@ export default function FeaturedProjects({ title = 'Les projets phares de notre 
               </div>
 
               <div className='mt-3'>
-                <p className='text-l text-foreground mb-2'>Contributeurs</p>
+                <p className='text-l text-foreground mb-2'>Contributors</p>
                 <div className='flex flex-wrap gap-2'>
                   {active.contributors.map(c => (
                     <span

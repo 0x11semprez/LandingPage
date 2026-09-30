@@ -31,6 +31,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    filter: grayscale(1) invert(1);
+  }
+
+  img,
+  video {
+    filter: invert(1);
   }
 
   body {

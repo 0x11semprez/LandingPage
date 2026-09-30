@@ -17,7 +17,7 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
       id: 'whitecomet-research',
       title: 'Whitecomet-Research',
       description:
-        'Whitecomet-Research est un projet de recherche sur les logiciels malveillants. L\'objectif de ce projet est d\'étudier différents types de techniques permettant de contourner les antivirus, comme les programmes polymorphes et métamorphiques.',
+        'Whitecomet-Research is a malware research project. Its goal is to study different techniques for evading antivirus software, such as polymorphic and metamorphic programs.',
       tools: ['C', 'Polymorphism', 'Metamorphism'],
       contributors: [
         'Edouard Sengeissen',
@@ -31,7 +31,7 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
       id: 'smartshark',
       title: 'Smartshark',
       description:
-        'SmartShark est un système de détection d\'intrusion (IDS) basé sur l\'apprentissage automatique pour reconnaître des attaques DDoS (Distributed Denial-of-Service) qui peuvent paralyser un réseau et MITM (Man-In-The-Middle) qui permet d’espionner votre connexion ainsi que de voler des données importantes, et à y faire face plus efficacement.',
+        'SmartShark is a machine-learning intrusion detection system (IDS) that recognizes DDoS (Distributed Denial-of-Service) attacks, which can cripple a network, and MITM (Man-In-The-Middle) attacks, which spy on your connection and steal sensitive data, to counter them more effectively.',
       tools: ['TensorFlow', 'Python', 'tshark', 'Flask'],
       contributors: ['Valentin De Matos', 'Quentin Fringhian'],
       heroImage: { src: '/cyber/smartshark.png', alt: 'Smartshark hero' },
@@ -41,7 +41,7 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
       id: 'reverse-malware',
       title: 'Reverse-Malware',
       description:
-        'Reverse-Malware a pour objectif d\'analyser, de procéder à un reverse engineering et de déjouer l\'obfuscation d\'un virus. Il rédige ensuite un rapport de recherche présentant les méthodes d\'analyse et les découvertes concernant ce virus.',
+        'Reverse-Malware aims to analyze, reverse engineer and defeat the obfuscation of a virus. It then produces a research report presenting the analysis methods and findings about that virus.',
       tools: ['JS', 'Esprima', 'Escodegen'],
       contributors: ['Georges Kypriadis', 'Thomas Pommier', 'Tom Sancho', 'Yanis Boumedad', 'Lenny Vongphouthone'],
       heroImage: { src: '/cyber/reverse-malware.png', alt: 'Reverse Malware hero' },
@@ -51,7 +51,7 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
       id: 'sharkticon',
       title: 'Sharkticon',
       description:
-        'Sharkticon est un système de détection d\'intrusion utilisant un système de détection d\'anomalies et d\'apprentissage automatique qui le rend capable de détecter des attaques qu\'il n\'a jamais vues auparavant. ',
+        'Sharkticon is an intrusion detection system using anomaly detection and machine learning, which lets it detect attacks it has never seen before.',
       tools: ['TensorFlow', 'PyShark', 'Python'],
       contributors: ['Mikaël Vallenet', 'Evan Sabre'],
       heroImage: { src: '/cyber/sharkticon.png', alt: 'Sharkticon hero' },
@@ -65,41 +65,41 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
       <div className='grid grid-cols-1 gap-4 md:hidden px-4'>
         <ProfileCard
           name='Timothée Pasteau-Berthaud'
-          role='Responsable Cybersécurité'
+          role='Cybersecurity Lead'
           imageSrc='/cyber/timo.png'
-          imageAlt='Responsable Cybersécurité'
+          imageAlt='Cybersecurity Lead'
           onContactClick={onOpenContactModal}
           priority={isPriority}
         />
         <StatsCard
           number='25+'
-          title='Projets complétés'
-          description='Du reverse engineering de malwares à la création de RAT nos projets couvrent la partie offensive et défensive de la cybersécurité.'
+          title='Completed projects'
+          description='From malware reverse engineering to building RATs, our projects cover both offensive and defensive cybersecurity.'
         />
         <StatsCard
           number='45+'
-          title='Workshops de découverte animés'
-          description='Nos workshops couvrent les fondamentaux de la cybersécurité : forensic, ransomware, reverse engineering, cryptographie et bien plus.'
+          title='Introductory workshops held'
+          description='Our workshops cover cybersecurity fundamentals: forensics, ransomware, reverse engineering, cryptography and more.'
         />
         <EventImageCard
           imageSrc='/cyber/ec2.jpg'
           imageAlt='European Cyber Cup'
           title='European Cyber Cup'
-          date='8 septembre 2021'
+          date='September 8, 2021'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/cyber/incyber.png'
-          imageAlt='Salon InCyber'
-          title='Salon InCyber'
-          date='1 Avril 2025'
+          imageAlt='InCyber Forum'
+          title='InCyber Forum'
+          date='April 1, 2025'
           priority={isPriority}
         />
         <LargeEventCard
           imageSrc='/cyber/pathwar.png'
           imageAlt='CTF Pathwar'
           title='CTF Pathwar'
-          date='25 Mai 2023'
+          date='May 25, 2023'
           priority={isPriority}
         />
       </div>
@@ -110,9 +110,9 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
         <div className='row-span-2'>
           <ProfileCard
             name='Timothée Pasteau-Berthaud'
-            role='Responsable Cybersécurité'
+            role='Cybersecurity Lead'
             imageSrc='/cyber/timo.png'
-            imageAlt='Responsable Cybersécurité'
+            imageAlt='Cybersecurity Lead'
             onContactClick={onOpenContactModal}
           />
         </div>
@@ -120,28 +120,28 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
         {/* Right column cards */}
         <StatsCard
           number='25+'
-          title='Projets complétés'
-          description='Du reverse engineering de malwares à la création de RAT nos projets couvrent la partie offensive et défensive de la cybersécurité.'
+          title='Completed projects'
+          description='From malware reverse engineering to building RATs, our projects cover both offensive and defensive cybersecurity.'
         />
         <StatsCard
           number='45+'
-          title='Workshops de découverte animés'
-          description='Nos workshops couvrent les fondamentaux de la cybersécurité : forensic, ransomware, reverse engineering, cryptographie et bien plus.'
+          title='Introductory workshops held'
+          description='Our workshops cover cybersecurity fundamentals: forensics, ransomware, reverse engineering, cryptography and more.'
         />
 
         {/* Event Cards in bottom row */}
         <EventImageCard
           imageSrc='/cyber/incyber.png'
-          imageAlt='Salon InCyber'
-          title='Salon InCyber'
-          date='1 Avril 2025'
+          imageAlt='InCyber Forum'
+          title='InCyber Forum'
+          date='April 1, 2025'
           priority={isPriority}
         />
         <EventImageCard
           imageSrc='/cyber/ec2.jpg'
           imageAlt='European Cyber Cup'
           title='European Cyber Cup'
-          date='8 septembre 2021'
+          date='September 8, 2021'
           priority={isPriority}
         />
 
@@ -151,7 +151,7 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
             imageSrc='/cyber/pathwar.png'
             imageAlt='CTF Pathwar'
             title='CTF Pathwar'
-            date='25 Mai 2023'
+            date='May 25, 2023'
             priority={isPriority}
           />
         </div>
@@ -163,9 +163,9 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
         <div className='col-span-1'>
           <ProfileCard
             name='Timothée Pasteau-Berthaud'
-            role='Responsable Cybersécurité'
+            role='Cybersecurity Lead'
             imageSrc='/cyber/timo.png'
-            imageAlt='Responsable Cybersécurité'
+            imageAlt='Cybersecurity Lead'
             onContactClick={onOpenContactModal}
           />
         </div>
@@ -174,13 +174,13 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
         <div className='col-span-1 grid grid-rows-2 gap-4 2xl:gap-6'>
           <StatsCard
             number='25+'
-            title='Projets complétés'
-            description='Du reverse engineering de malwares à la création de RAT nos projets couvrent la partie offensive et défensive de la cybersécurité.'
+            title='Completed projects'
+            description='From malware reverse engineering to building RATs, our projects cover both offensive and defensive cybersecurity.'
           />
           <StatsCard
             number='45+'
-            title='Workshops de découverte animés'
-            description='Nos workshops couvrent les fondamentaux de la cybersécurité : forensic, ransomware, reverse engineering, cryptographie et bien plus.'
+            title='Introductory workshops held'
+            description='Our workshops cover cybersecurity fundamentals: forensics, ransomware, reverse engineering, cryptography and more.'
           />
         </div>
 
@@ -190,14 +190,14 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
             imageSrc='/cyber/ec2.jpg'
             imageAlt='European Cyber Cup'
             title='European Cyber Cup'
-            date='8 septembre 2021'
+            date='September 8, 2021'
             priority={isPriority}
           />
           <EventImageCard
             imageSrc='/cyber/incyber.png'
-            imageAlt='Salon InCyber'
-            title='Salon InCyber'
-            date='1 Avril 2025'
+            imageAlt='InCyber Forum'
+            title='InCyber Forum'
+            date='April 1, 2025'
             priority={isPriority}
           />
         </div>
@@ -208,7 +208,7 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
             imageSrc='/cyber/pathwar.png'
             imageAlt='CTF Pathwar'
             title='CTF Pathwar'
-            date='25 Mai 2023'
+            date='May 25, 2023'
             priority={isPriority}
           />
         </div>
