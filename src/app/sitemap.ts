@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { poles } from '@/data/poles'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -28,5 +29,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'https://poc-innovation.fr/logo_white.svg',
       ],
     },
+    {
+      url: 'https://poc-innovation.fr/events',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://poc-innovation.fr/genesis',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://poc-innovation.fr/photobook',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    ...poles.map(pole => ({
+      url: `https://poc-innovation.fr/innovation/${pole.key}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
   ]
 }

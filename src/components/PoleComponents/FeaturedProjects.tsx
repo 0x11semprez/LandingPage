@@ -30,7 +30,7 @@ export default function FeaturedProjects({ title = 'Our pole\'s flagship project
 
   return (
     <section className='mt-16 md:mt-28'>
-      <h2 className='text-2xl md:text-4xl font-bold text-white mb-6'>{title}</h2>
+      <h2 className='text-2xl md:text-4xl font-bold text-foreground mb-6'>{title}</h2>
 
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch'>
         {/* Left: Large image + thumbnails below */}
@@ -65,12 +65,12 @@ export default function FeaturedProjects({ title = 'Our pole\'s flagship project
                   key={p.id}
                   type='button'
                   onClick={() => setActiveId(p.id)}
-                  className={`cursor-pointer relative flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden border ${p.id === active.id ? 'border-white/60' : 'border-foreground/10'}`}
+                  className={`cursor-pointer relative flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden border ${p.id === active.id ? 'border-foreground/60' : 'border-foreground/10'}`}
                   aria-label={`Afficher ${p.title}`}
                 >
                   <Image src={p.heroImage.src} alt={p.heroImage.alt} width={320} height={180} className='w-full h-full object-cover' loading='eager' />
                   {p.id === active.id && (
-                    <div className='absolute inset-0 ring-2 ring-white/50 pointer-events-none' />
+                    <div className='absolute inset-0 ring-2 ring-foreground/50 pointer-events-none' />
                   )}
                 </button>
               ))}

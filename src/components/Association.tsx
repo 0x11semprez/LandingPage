@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 import GlassyStatCard from './GlassyStatCard'
+import { associationStats, formatStat } from '@/data/stats'
 
 function Association() {
   return (
@@ -59,31 +60,31 @@ function Association() {
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-4 xl:gap-5'>
               {[
                 {
-                  statText: '25+',
+                  statText: formatStat(associationStats.activeMembers),
                   title: 'Active members',
                   description:
                     'Present on several campuses across France, mainly Paris and Lyon.',
                   delay: 0.8,
                 },
                 {
-                  statText: '125+',
+                  statText: formatStat(associationStats.completedProjects),
                   title: 'Completed projects',
                   description:
                     'PoC runs many projects, independently or in collaboration with companies.',
                   delay: 1.0,
                 },
                 {
-                  statText: '300+',
+                  statText: formatStat(associationStats.events),
                   title: 'Events',
                   description:
                     'For students and professionals all over France.',
                   delay: 0.8,
                 },
                 {
-                  statText: '200+',
+                  statText: formatStat(associationStats.alumni),
                   title: 'Alumni worldwide',
                   description:
-                    'From start-ups to tech giants like Google and Microsoft, our alumni spread the PoC DNA all around the globe.',
+                    'From start-ups to tech giants, our alumni spread the PoC DNA all around the globe.',
                   delay: 0.9,
                 },
               ].map(card => (

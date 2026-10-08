@@ -1,86 +1,38 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import Link from 'next/link'
 import Footer from '@/components/Footer'
-import InnovationPoles from '@/components/InnovationPoles'
+import PageHeader from '@/components/PageHeader'
 import ScrollReveal from '@/components/ScrollReveal'
+import { poles } from '@/data/poles'
+import Reveal from '@/components/Reveal'
 
 export default function InnovationPage() {
   return (
     <main>
       <section className='relative min-h-screen flex flex-col items-center overflow-hidden bg-background-main'>
-        <div className='absolute inset-0 w-full h-full'>
-          <div className='absolute top-0 left-0 md:w-full w-[400vw] overflow-hidden z-[2]'>
-            <Image
-              src='/blue_lines.svg'
-              alt=''
-              width={1920}
-              height={1080}
-              className='md:w-full md:h-auto opacity-35'
-              priority
-            />
+        <PageHeader
+          title='Poles'
+          subtitle='Organized into five expertise poles, PoC Innovation runs in 6-month project waves to foster skill growth, collaboration and innovation.'
+        />
+        <ScrollReveal className='w-full'>
+          <div className='container-custom px-5 pb-24 md:pb-36 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {poles.map((pole, revealIndex) => (
+              <Reveal key={pole.key} index={revealIndex}>
+                <Link
+                  href={`/innovation/${pole.key}`}
+                  className='group h-full flex flex-col rounded-2xl border border-foreground/10 p-6 md:p-8 text-left transition-colors duration-200 hover:border-foreground/40'
+                >
+                  <p className='text-sm font-medium uppercase tracking-widest' style={{ color: pole.color }}>{pole.subtitle}</p>
+                  <h2 className='mt-3 text-2xl md:text-3xl font-semibold tracking-tight text-foreground'>{pole.title}</h2>
+                  <p className='mt-4 text-muted-foreground'>{pole.description}</p>
+                  <span className='mt-6 text-sm font-medium text-foreground group-hover:underline underline-offset-4'>Discover the pole →</span>
+                </Link>
+              </Reveal>
+            ))}
           </div>
-        </div>
-        <div className='absolute top-[45%] md:w-full w-[400vw] left-0 overflow-hidden z-[1]'>
-          <div className='relative'>
-            <Image
-              src='/red_lines.svg'
-              alt=''
-              width={1920}
-              height={1080}
-              className='md:w-full md:h-auto opacity-40 rotate-[180deg]'
-              priority
-            />
-            <div
-              className='absolute inset-0'
-              style={{
-                background:
-                  'linear-gradient(180deg, #050610 0%, rgba(5, 6, 16, 0.00) 27.4%, rgba(5, 6, 16, 0.00) 61.54%, #050610 100%)',
-              }}
-            >
-            </div>
-          </div>
-        </div>
-        <div className='container-custom relative z-10 mt-36 md:mt-72 text-center'>
-          <motion.h1
-            className='text-3xl md:text-5xl font-extrabold text-foreground'
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          >
-            About us
-          </motion.h1>
-        </div>
-        <motion.div
-          className='text-md md:text-lg text-muted-foreground mb-8 max-w-4xl px-5 mt-5 text-center mx-auto'
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.4,
-            ease: [0.25, 0.46, 0.45, 0.94],
-          }}
-        >
-          PoC Innovation is a community of passionate developers who build open-source
-          projects and organize and take part in events all over France. Organized into
-          expertise poles, the association runs in 6-month project waves to foster skill
-          growth, collaboration, and innovation.
-        </motion.div>
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.6,
-            ease: 'linear',
-          }}
-        >
-          <InnovationPoles />
-        </motion.div>
-        <ScrollReveal delay={0.1}>
-          <Footer />
         </ScrollReveal>
+        <Footer />
       </section>
     </main>
   )

@@ -1,19 +1,23 @@
 @import 'tailwindcss';
 
+/* Poppins is loaded by next/font in layout.tsx under a generated family name, exposed as --font-poppins */
+@theme inline {
+  --font-display: var(--font-poppins), sans-serif;
+  --font-sans: var(--font-poppins), sans-serif;
+}
+
 @theme {
-  --font-display: 'Poppins', sans-serif;
-  --font-sans: 'Poppins', sans-serif;
   --breakpoint-3xl: 1920px;
 
   /* Couleurs personnalisées */
   --color-primary: #3b82f6;
-  --color-foreground: #ffffff;
+  --color-foreground: #0a0a0a;
   --color-muted: #6b7280;
-  --color-muted-foreground: #9ca3af;
+  --color-muted-foreground: #4b5563;
   --color-primary-blue: #050610;
   --color-primary-blue-light: #103095;
   --color-primary-red: #aa222b;
-  --color-background-main: #050610;
+  --color-background-main: #ffffff;
   --color-background-secondary: #e2e2e21a;
   --color-text-light: #c0c0c0;
   --color-text-inactive: #999999;
@@ -31,16 +35,10 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    filter: grayscale(1) invert(1);
-  }
-
-  img,
-  video {
-    filter: invert(1);
   }
 
   body {
-    background-color: black;
+    background-color: white;
     @apply text-gray-900 antialiased;
   }
 }
@@ -51,7 +49,7 @@
   }
 
   .text-gradient {
-    background: linear-gradient(82deg, #7989bc 17.63%, #c2d0ff 80.23%);
+    background: linear-gradient(82deg, #224daa 17.63%, #7989bc 80.23%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;

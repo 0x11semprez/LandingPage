@@ -1,5 +1,5 @@
-import type { FeaturedProject } from './FeaturedProjects'
 import React from 'react'
+import { blockchainProjects } from '@/data/projects'
 import LargeEventCard from '../PoleCards/LargeEventCard'
 import EventImageCard from '../PoleCards/MediumEventCard'
 import ProfileCard from '../PoleCards/ProfileCard'
@@ -12,52 +12,6 @@ type P2PPoleComponentProps = {
 }
 
 export default function P2PPoleComponent({ onOpenContactModal, isPriority = false }: P2PPoleComponentProps) {
-  const featuredProjects: FeaturedProject[] = [
-    {
-      id: 'mev-tracker',
-      title: 'MEV Tracker',
-      description:
-        'A program that analyzes pending transactions on the Ethereum blockchain and determines whether they were sent by a bot. It relies on an AI model trained to detect bot-issued transactions.',
-      tools: ['PyTorch', 'NumPy', 'Python', 'Go'],
-      contributors: [
-        'Alexandre Grare',
-        'Elyes Toumi',
-        'Onsager He',
-      ],
-      heroImage: { src: '/p2p/mev-tracker.png', alt: 'MEV Tracker hero' },
-      repoUrl: 'https://github.com/PoCInnovation/MEV-Tracker',
-    },
-    {
-      id: 'dao',
-      title: 'Superfluid-DAO',
-      description:
-        'Superfluid DAO lets users create and interact with a DAO where participation is essential. Using the Superfluid protocol, users must stay actively involved or risk losing tokens. This encourages active involvement and participatory governance within the community.',
-      tools: ['Solidity', 'Foundry'],
-      contributors: ['Mehdi Djendar', 'mounia ARJDAL', 'Lyam Gomès', 'Martin Saldinger'],
-      heroImage: { src: '/p2p/superfluid-dao.png', alt: 'Superfluid DAO hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Superfluid-DAO',
-    },
-    {
-      id: 'price-sensor',
-      title: 'Price Sensor',
-      description:
-        'Price Sensor is a price sensor implementation for the Mangrove protocol. Its abstract design makes it easy to integrate into different kinds of smart offers.',
-      tools: ['Solidity', 'Mangrove'],
-      contributors: ['Martin Saldinger', 'Nathan Flattin', 'Ismaël Fall'],
-      heroImage: { src: '/p2p/price-sensor.png', alt: 'NFT Marketplace hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Price-Sensor',
-    },
-    {
-      id: 'poc-ether',
-      title: 'PoCEther',
-      description:
-        'PoCEther is a blockchain security challenge platform. It lets users explore and solve hands-on exercises covering various vulnerabilities and attacks on smart contracts.',
-      tools: ['Solidity', 'Truffle', 'React'],
-      contributors: ['Lucas Louis', 'Matéo Viel'],
-      heroImage: { src: '/p2p/pocether.png', alt: 'Bridge Protocol hero' },
-      repoUrl: 'https://github.com/PoCInnovation/PoCEther',
-    },
-  ]
 
   return (
     <div className='w-full'>
@@ -215,7 +169,7 @@ export default function P2PPoleComponent({ onOpenContactModal, isPriority = fals
       </div>
 
       <div className='w-full px-4'>
-        <FeaturedProjects projects={featuredProjects} />
+        <FeaturedProjects projects={blockchainProjects} />
       </div>
     </div>
   )

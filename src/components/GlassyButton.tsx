@@ -15,7 +15,7 @@ export default function GlassyButton({
     <motion.button
       onClick={onClick}
       className={`
-        relative px-6 py-4 text-white font-medium text-md
+        relative px-6 py-4 text-foreground font-medium text-md
         bg-[#E2E2E21A]/90 bg-opacity-40 
         rounded-3xl 
         backdrop-blur-2xl 

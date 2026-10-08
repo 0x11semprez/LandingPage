@@ -1,5 +1,5 @@
-import type { FeaturedProject } from './FeaturedProjects'
 import React from 'react'
+import { softwareProjects } from '@/data/projects'
 import LargeEventCard from '../PoleCards/LargeEventCard'
 import EventImageCard from '../PoleCards/MediumEventCard'
 import ProfileCard from '../PoleCards/ProfileCard'
@@ -12,53 +12,6 @@ type SoftwarePoleComponentProps = {
 }
 
 export default function SoftwarePoleComponent({ onOpenContactModal, isPriority = false }: SoftwarePoleComponentProps) {
-  const featuredProjects: FeaturedProject[] = [
-    {
-      id: 'sveno',
-      title: 'Sveno',
-      description:
-        'A tool that converts any React JS application into a Svelte application. Sveno aims to become a powerful tool able to transpile full projects and help developers.',
-      tools: ['Python', 'JS', 'Regex'],
-      contributors: [
-        'Allan Deleve',
-        'Amoz Pay',
-        'Baptiste Barbotin',
-        'Tom Chaveau',
-      ],
-      heroImage: { src: '/soft/sveno.png', alt: 'Sveno hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Sveno',
-    },
-    {
-      id: 'asyncFlow',
-      title: 'AsyncFlow',
-      description:
-        'A JavaScript library to create serverless cloud tasks right inside your code, supporting Node, Python, Java, Ruby and Go.',
-      tools: ['Typescript', 'SWC', 'AWS Lambda'],
-      contributors: ['Pierre Riss', 'Loan Riyanto', 'Laurent Gonzalez'],
-      heroImage: { src: '/soft/asyncflow.png', alt: 'AsyncFlow hero' },
-      repoUrl: 'https://github.com/PoCInnovation/AsyncFlow',
-    },
-    {
-      id: 'ipc',
-      title: 'InterPlanetaryCloud',
-      description:
-        'InterPlanetaryCloud is a web platform giving simple access to decentralized, encrypted file storage and to cloud computing, deploying programs on Aleph VMs.',
-      tools: ['Typescript', 'Aleph', 'IPFS'],
-      contributors: ['Lucas Louis', 'Reza Rahemtola', 'Adrien Fort', 'And many more!'],
-      heroImage: { src: '/soft/ipc.png', alt: 'InterPlanetaryCloud hero' },
-      repoUrl: 'https://github.com/PoCInnovation/InterPlanetaryCloud',
-    },
-    {
-      id: 'dagviz',
-      title: 'DagViz',
-      description:
-        'DagViz displays all the information about a CUE program\'s definitions and their dependencies as DAGs, which often reveal bugs, circular dependencies and unoptimized schemas.',
-      tools: ['CUE', 'Typescript', 'Go'],
-      contributors: ['Ismaël Fall', 'Florian Lauch', 'Adrien Fort'],
-      heroImage: { src: '/soft/dagviz.png', alt: 'DabViz hero' },
-      repoUrl: 'https://github.com/PoCInnovation/DagViz',
-    },
-  ]
 
   return (
     <div className='w-full'>
@@ -216,7 +169,7 @@ export default function SoftwarePoleComponent({ onOpenContactModal, isPriority =
       </div>
 
       <div className='w-full px-4'>
-        <FeaturedProjects projects={featuredProjects} />
+        <FeaturedProjects projects={softwareProjects} />
       </div>
     </div>
   )

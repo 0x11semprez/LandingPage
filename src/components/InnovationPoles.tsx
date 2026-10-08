@@ -329,7 +329,7 @@ export default function InnovationPoles() {
             <button
               type='button'
               onClick={() => setAutoRotateEnabled(!autoRotateEnabled)}
-              className='cursor-pointer flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-200 text-white/70 hover:text-white text-sm backdrop-blur-sm border border-white/10'
+              className='cursor-pointer flex items-center gap-2 px-3 py-1.5 rounded-full bg-foreground/5 hover:bg-foreground/10 transition-all duration-200 text-foreground/70 hover:text-foreground text-sm backdrop-blur-sm border border-white/10'
             >
               {autoRotateEnabled
                 ? (

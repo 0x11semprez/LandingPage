@@ -1,124 +1,34 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { useState } from 'react'
-import AssociationContactModal from './AssociationContactModal'
-import PoCButton from './PocButton'
+
+const ease = [0.25, 0.46, 0.45, 0.94] as const
 
 export function Hero() {
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
-
   return (
-    <>
-      <div className='container-custom relative z-10 mt-36 md:mt-72'>
-        <div className='flex flex-col items-center justify-center h-full text-center'>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className='h-[120px] md:h-[160px] flex items-center justify-center mb-2'
-          >
-            <div className='relative inline-block'>
-              {/* Gradient overlay, masked by logo shape */}
-              <div
-                className='absolute inset-0 z-20'
-                style={{
-                  WebkitMaskImage: 'url(/logo_poc.png)',
-                  WebkitMaskRepeat: 'no-repeat',
-                  WebkitMaskPosition: 'center',
-                  WebkitMaskSize: 'contain',
-                  maskImage: 'url(/logo_poc.png)',
-                  maskRepeat: 'no-repeat',
-                  maskPosition: 'center',
-                  maskSize: 'contain',
-                  background: `
-        radial-gradient(circle at bottom left, rgba(96,165,250,0.5) 0%, transparent 30%),
-        radial-gradient(circle at top right, rgba(244,114,182,0.6) 0%, transparent 40%)
-      `,
-                }}
-              />
-
-              {/* Original white logo on top */}
-              <Image
-                src='/logo_poc.png'
-                alt='Logo'
-                width={440}
-                height={160}
-                className='relative z-10 w-[330px] md:w-[560px] h-auto'
-                priority
-              />
-            </div>
-          </motion.div>
-
-          {/* --- everything below unchanged --- */}
-          <motion.div
-            className='flex items-center justify-center space-x-2 mb-5 mt-7'
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.4,
-              ease: [0.25, 0.46, 0.45, 0.94],
-            }}
-          >
-            <motion.div
-              className='bg-foreground h-[2px] w-6'
-              initial={{ width: 0 }}
-              animate={{ width: 24 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            />
-            <h1 className='text-lg md:text-xl font-semibold text-foreground'>
-              Student Innovation Center
-            </h1>
-            <motion.div
-              className='bg-foreground h-[2px] w-6'
-              initial={{ width: 0 }}
-              animate={{ width: 24 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            />
-          </motion.div>
-
-          <motion.p
-            className='text-md md:text-lg text-muted-foreground mb-8 max-w-4xl px-5'
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.6,
-              ease: [0.25, 0.46, 0.45, 0.94],
-            }}
-          >
-            PoC is the leading French innovation center bringing together the
-            most motivated students. We build innovative, open-source
-            projects with tomorrow's technologies, in collaboration with
-            industry companies
-          </motion.p>
-
-          <motion.div
-            className='flex items-center justify-center space-x-4 md:space-x-8'
-            initial={{ y: 30 }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.8,
-              ease: [0.25, 0.46, 0.45, 0.94],
-            }}
-          >
-            <PoCButton
-              onClick={() => setIsContactModalOpen(true)}
-            >
-              Contact us
-            </PoCButton>
-          </motion.div>
-        </div>
+    <div className='container-custom relative z-10 min-h-svh flex flex-col items-center justify-center pt-24 md:pt-[112px] pb-16 text-center'>
+      <div className='flex flex-col items-center justify-center w-full gap-8 md:gap-10'>
+        <motion.h1
+          className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-foreground max-w-4xl px-5 leading-[1.15]'
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2, ease }}
+        >
+          Engineering open-source research projects and events that help humanity.
+        </motion.h1>
+        <motion.video
+          className='w-full max-w-6xl aspect-video rounded-3xl object-cover grayscale'
+          src='/videos/hero-2026-10-08.mp4'
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload='auto'
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4, ease }}
+        />
       </div>
-
-      {/* Association Contact Modal */}
-      <AssociationContactModal
-        isOpen={isContactModalOpen}
-        onClose={() => setIsContactModalOpen(false)}
-      />
-    </>
+    </div>
   )
 }

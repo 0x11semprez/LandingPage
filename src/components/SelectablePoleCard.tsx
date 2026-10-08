@@ -26,7 +26,7 @@ export default function SelectablePoleCard({
     <button
       type='button'
       onClick={onClick}
-      className={`cursor-pointer relative w-80 h-44 text-left rounded-xl border backdrop-blur-2xl px-4 py-4 transition-all duration-300 bg-[#E2E2E21A]/40 hover:bg-[#E2E2E21A]/60 hover:scale-105 origin-center ${selected ? 'scale-105 shadow-2xl shadow-white/10 z-10' : 'scale-100'}`}
+      className={`cursor-pointer relative w-80 h-44 text-left rounded-xl border backdrop-blur-2xl px-4 py-4 transition-all duration-300 bg-[#E2E2E21A]/40 hover:bg-[#E2E2E21A]/60 hover:scale-105 origin-center ${selected ? 'scale-105 shadow-2xl shadow-black/10 z-10' : 'scale-100'}`}
       style={borderC}
     >
       {selected && (
@@ -37,7 +37,7 @@ export default function SelectablePoleCard({
       <div className='relative z-[1] flex items-start gap-3'>
         <div className='flex-shrink-0'>{icon}</div>
         <div className='min-w-0 pt-1'>
-          <h3 className='text-base sm:text-md font-semibold text-white truncate mb-1.5'>{title}</h3>
+          <h3 className='text-base sm:text-md font-semibold text-foreground truncate mb-1.5'>{title}</h3>
           <p className='text-sm sm:text-xs text-foreground/80 truncate'>{subtitle}</p>
         </div>
       </div>

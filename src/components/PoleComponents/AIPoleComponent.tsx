@@ -1,5 +1,5 @@
-import type { FeaturedProject } from './FeaturedProjects'
 import React from 'react'
+import { aiProjects } from '@/data/projects'
 import LargeEventCard from '../PoleCards/LargeEventCard'
 import EventImageCard from '../PoleCards/MediumEventCard'
 import ProfileCard from '../PoleCards/ProfileCard'
@@ -12,53 +12,6 @@ type AIPoleComponentProps = {
 }
 
 export default function AIPoleComponent({ onOpenContactModal, isPriority = false }: AIPoleComponentProps) {
-  const featuredProjects: FeaturedProject[] = [
-    {
-      id: 'cyrebro',
-      title: 'Cyrebro',
-      description:
-        'AI-based medical pre-consultation assistant, developed with the Institut de l’Audition and the Institut Pasteur. Conversational intake, automated summaries and medical consistency checks.',
-      tools: ['Python', 'Transformers', 'MedGamma'],
-      contributors: [
-        'Léandre Ramos',
-        'Sacha Henneveux',
-        'Antoine Béal',
-        'Manmohit-Singh Lal',
-      ],
-      heroImage: { src: '/ai/cyrebro.png', alt: 'Cyrebro hero' },
-      repoUrl: 'https://github.com/PoCInnovation/cyrebro',
-    },
-    {
-      id: 'open-zero',
-      title: 'Open-Zero',
-      description:
-        'Open-Zero is an open-source research project that reproduces DeepMind\'s AlphaZero and MuZero methods to train a chess AI, using deep reinforcement learning (notably the A3C algorithm).',
-      tools: ['PyTorch', 'Python', 'AC3'],
-      contributors: ['Gino Ambigaipalan', 'Jean-Baptiste Debize', 'Nell Fauveau', 'Bogdan Guillemoles'],
-      heroImage: { src: '/ai/open-zero.png', alt: 'Open-Zero hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Open-Zero',
-    },
-    {
-      id: 'infinalys',
-      title: 'Infinalys',
-      description:
-        'Infinalys is a stock forecasting web app combining market data visualization with predictions from a deep learning AI. Easy to deploy with Docker, it offers a modern, interactive interface to explore financial trends.',
-      tools: ['React', 'Yahoo finance', 'TensorFlow', 'Docker'],
-      contributors: ['Alexandre Chetrit', 'Coline Seguret', 'Grégoire Brasseur', 'Robin Christol', 'Paul Monnery'],
-      heroImage: { src: '/ai/infinalys.png', alt: 'Infinalys hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Infinalys2',
-    },
-    {
-      id: 'deep-poc',
-      title: 'Deep-PoC',
-      description:
-        'Deep-PoC is a deepfake detection tool that uses AI to identify manipulated content (images or videos). It analyzes and flags visual forgeries to fight disinformation and malicious use.',
-      tools: ['Python', 'PyTorch', 'Django', 'Matplotlib'],
-      contributors: ['Mikael Vallenet', 'Valentin De Matos', 'Victor Guyot'],
-      heroImage: { src: '/ai/deep-poc.png', alt: 'Deep-PoC hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Deep-PoC',
-    },
-  ]
 
   return (
     <div className='w-full'>
@@ -218,7 +171,7 @@ export default function AIPoleComponent({ onOpenContactModal, isPriority = false
       </div>
 
       <div className='w-full px-4'>
-        <FeaturedProjects projects={featuredProjects} />
+        <FeaturedProjects projects={aiProjects} />
       </div>
     </div>
   )

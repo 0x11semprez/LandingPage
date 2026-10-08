@@ -1,5 +1,5 @@
-import type { FeaturedProject } from './FeaturedProjects'
 import React from 'react'
+import { cyberProjects } from '@/data/projects'
 import LargeEventCard from '../PoleCards/LargeEventCard'
 import EventImageCard from '../PoleCards/MediumEventCard'
 import ProfileCard from '../PoleCards/ProfileCard'
@@ -12,52 +12,6 @@ type CyberPoleComponentProps = {
 }
 
 export default function CyberPoleComponent({ onOpenContactModal, isPriority = false }: CyberPoleComponentProps) {
-  const featuredProjects: FeaturedProject[] = [
-    {
-      id: 'whitecomet-research',
-      title: 'Whitecomet-Research',
-      description:
-        'Whitecomet-Research is a malware research project. Its goal is to study different techniques for evading antivirus software, such as polymorphic and metamorphic programs.',
-      tools: ['C', 'Polymorphism', 'Metamorphism'],
-      contributors: [
-        'Edouard Sengeissen',
-        'Loïc Titren',
-        'Roman Gascoin',
-      ],
-      heroImage: { src: '/cyber/whitecomet-research.png', alt: 'WhiteComet Research hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Whitecomet-Research',
-    },
-    {
-      id: 'smartshark',
-      title: 'Smartshark',
-      description:
-        'SmartShark is a machine-learning intrusion detection system (IDS) that recognizes DDoS (Distributed Denial-of-Service) attacks, which can cripple a network, and MITM (Man-In-The-Middle) attacks, which spy on your connection and steal sensitive data, to counter them more effectively.',
-      tools: ['TensorFlow', 'Python', 'tshark', 'Flask'],
-      contributors: ['Valentin De Matos', 'Quentin Fringhian'],
-      heroImage: { src: '/cyber/smartshark.png', alt: 'Smartshark hero' },
-      repoUrl: 'https://github.com/PoCInnovation/SmartShark',
-    },
-    {
-      id: 'reverse-malware',
-      title: 'Reverse-Malware',
-      description:
-        'Reverse-Malware aims to analyze, reverse engineer and defeat the obfuscation of a virus. It then produces a research report presenting the analysis methods and findings about that virus.',
-      tools: ['JS', 'Esprima', 'Escodegen'],
-      contributors: ['Georges Kypriadis', 'Thomas Pommier', 'Tom Sancho', 'Yanis Boumedad', 'Lenny Vongphouthone'],
-      heroImage: { src: '/cyber/reverse-malware.png', alt: 'Reverse Malware hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Reverse-Malware',
-    },
-    {
-      id: 'sharkticon',
-      title: 'Sharkticon',
-      description:
-        'Sharkticon is an intrusion detection system using anomaly detection and machine learning, which lets it detect attacks it has never seen before.',
-      tools: ['TensorFlow', 'PyShark', 'Python'],
-      contributors: ['Mikaël Vallenet', 'Evan Sabre'],
-      heroImage: { src: '/cyber/sharkticon.png', alt: 'Sharkticon hero' },
-      repoUrl: 'https://github.com/PoCInnovation/Sharkticon',
-    },
-  ]
 
   return (
     <div className='w-full'>
@@ -215,7 +169,7 @@ export default function CyberPoleComponent({ onOpenContactModal, isPriority = fa
       </div>
 
       <div className='w-full px-4'>
-        <FeaturedProjects projects={featuredProjects} />
+        <FeaturedProjects projects={cyberProjects} />
       </div>
     </div>
   )
