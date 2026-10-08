@@ -202,8 +202,8 @@ export default function PolesDiagram() {
             {/* Clicking PoC resets the section to white */}
             <motion.g className='cursor-pointer' onClick={() => setSelectedKey(null)} {...svgReveal(0, isInView)}>
               <circle r={CORE_RADIUS} fill='white' stroke='#0a0a0a' strokeWidth={2.5} />
-              {/* Letters write themselves again on every pole click */}
-              {isInView && <WriteOnLogo key={selectedKey ?? 'none'} x={-62} y={-21.5} width={124} height={43} />}
+              {/* Letters write themselves once, when the diagram scrolls into view */}
+              {isInView && <WriteOnLogo x={-62} y={-21.5} width={124} height={43} />}
             </motion.g>
           </svg>
         </div>
