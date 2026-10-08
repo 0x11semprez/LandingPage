@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { motion, useInView } from 'framer-motion'
+import { useRef, useState } from 'react'
 import CountUp from './CountUp'
 import Reveal from './Reveal'
 import WriteOnLogo from './WriteOnLogo'
@@ -85,12 +85,13 @@ const detailedTotals: { value: number, suffix: string, label: string, descriptio
 // Same size for every figure, both rows
 const numberClass = 'text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight'
 
-// Same block appearance as Reveal.tsx, for SVG groups (y is in SVG units)
-function svgReveal(index: number) {
+// Same block appearance as Reveal.tsx, for SVG groups (y is in SVG units).
+// Visibility is tracked on the <svg> itself: iOS Safari does not report
+// intersections for inner <g> elements, which left the bubbles hidden on phones.
+function svgReveal(index: number, isInView: boolean) {
   return {
     initial: { opacity: 0, y: 24 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.3 },
+    animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 },
     transition: { duration: 0.7, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] as const },
   }
 }
@@ -111,17 +112,18 @@ type PoleNodeProps = {
   pole: Pole
   index: number
   isSelected: boolean
+  isInView: boolean
   onSelect: () => void
 }
 
-function PoleNode({ pole, index, isSelected, onSelect }: PoleNodeProps) {
+function PoleNode({ pole, index, isSelected, isInView, onSelect }: PoleNodeProps) {
   const angle = poleAngle(index)
   const center = pointAt(origin, POLE_DISTANCE, angle)
   const spokeStart = pointAt(origin, CORE_RADIUS, angle)
   const spokeEnd = pointAt(origin, POLE_DISTANCE - POLE_RADIUS, angle)
 
   return (
-    <motion.g {...svgReveal(index + 1)}>
+    <motion.g {...svgReveal(index + 1, isInView)}>
       <line x1={spokeStart.x} y1={spokeStart.y} x2={spokeEnd.x} y2={spokeEnd.y} stroke='#0a0a0a' strokeWidth={2.5} />
       <g
         role='button'
@@ -149,6 +151,8 @@ export default function PolesDiagram() {
   const [selectedKey, setSelectedKey] = useState<string | null>(null)
   const selectedPole = poles.find(pole => pole.key === selectedKey)
   const selectedDetails = poleData.find(pole => pole.key === selectedKey)
+  const svgRef = useRef<SVGSVGElement>(null)
+  const isInView = useInView(svgRef, { once: true, amount: 0.2 })
 
   return (
     <section className='w-full text-foreground'>
@@ -176,6 +180,7 @@ export default function PolesDiagram() {
           )}
 
           <svg
+            ref={svgRef}
             viewBox='-380 -380 760 800'
             className='mt-12 md:mt-16 w-full max-w-[900px] h-auto block'
             role='group'
@@ -189,15 +194,16 @@ export default function PolesDiagram() {
                 pole={pole}
                 index={index}
                 isSelected={pole.key === selectedKey}
+                isInView={isInView}
                 onSelect={() => setSelectedKey(current => (current === pole.key ? null : pole.key))}
               />
             ))}
 
             {/* Clicking PoC resets the section to white */}
-            <motion.g className='cursor-pointer' onClick={() => setSelectedKey(null)} {...svgReveal(0)}>
+            <motion.g className='cursor-pointer' onClick={() => setSelectedKey(null)} {...svgReveal(0, isInView)}>
               <circle r={CORE_RADIUS} fill='white' stroke='#0a0a0a' strokeWidth={2.5} />
               {/* Letters write themselves again on every pole click */}
-              <WriteOnLogo key={selectedKey ?? 'none'} playOnView x={-62} y={-21.5} width={124} height={43} />
+              {isInView && <WriteOnLogo key={selectedKey ?? 'none'} x={-62} y={-21.5} width={124} height={43} />}
             </motion.g>
           </svg>
         </div>
