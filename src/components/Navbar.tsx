@@ -1,6 +1,6 @@
 'use client'
 
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
@@ -74,6 +74,55 @@ function PolesMenu() {
   )
 }
 
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/events', label: 'Events' },
+  { href: '/genesis', label: 'Genesis' },
+  { href: '/photobook', label: 'Photobook' },
+]
+
+function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+
+  // Close on navigation
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks-extra/no-direct-set-state-in-use-effect
+    setIsOpen(false)
+  }, [pathname])
+
+  return (
+    <div className='md:hidden'>
+      <button
+        type='button'
+        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen(open => !open)}
+        className='cursor-pointer p-2 -mr-2 text-foreground'
+      >
+        {isOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
+      </button>
+      {isOpen && (
+        <div className='absolute inset-x-0 top-full border-t border-foreground/10 bg-white shadow-lg'>
+          <div className='container-custom flex flex-col py-4'>
+            {navLinks.map(link => (
+              <Link key={link.href} href={link.href} className='py-3 text-base text-foreground'>
+                {link.label}
+              </Link>
+            ))}
+            <div className='pt-3 pb-1 text-xs uppercase tracking-wider text-muted'>Poles</div>
+            {poles.map(pole => (
+              <Link key={pole.key} href={`/innovation/${pole.key}`} className='py-2 pl-3 text-base text-foreground'>
+                {pole.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 function GlassyNavbar() {
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
@@ -108,7 +157,7 @@ function GlassyNavbar() {
           {/* Letters write themselves on load and whenever the menu reappears */}
           <WriteOnLogo key={logoRevealKey} className='h-6 md:h-7 w-auto' />
         </Link>
-        <div className='flex items-center gap-5 sm:gap-8'>
+        <div className='hidden md:flex items-center gap-8'>
           <Link href='/' className={linkClass}>
             Home
           </Link>
@@ -123,6 +172,7 @@ function GlassyNavbar() {
             Photobook
           </Link>
         </div>
+        <MobileMenu />
       </nav>
     </header>
   )

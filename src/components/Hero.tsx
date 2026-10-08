@@ -20,6 +20,7 @@ export function Hero() {
         <motion.video
           className='w-full max-w-6xl aspect-video rounded-3xl object-cover grayscale'
           src='/videos/hero-2026-10-08.mp4'
+          poster='/videos/hero-poster.jpg'
           autoPlay
           muted
           loop
