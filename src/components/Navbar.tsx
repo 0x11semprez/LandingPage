@@ -7,9 +7,12 @@ import React, { useEffect, useRef, useState } from 'react'
 import { poles } from '@/data/poles'
 import WriteOnLogo from './WriteOnLogo'
 
-const linkClass = 'text-foreground hover:text-foreground/60 transition-colors duration-200 text-sm md:text-[15px]'
+// isLight: white text while the bar is transparent over the home video
+function linkClass(isLight: boolean) {
+  return `${isLight ? 'text-white hover:text-white/70' : 'text-foreground hover:text-foreground/60'} transition-colors duration-200 text-sm md:text-[15px]`
+}
 
-function PolesMenu() {
+function PolesMenu({ isLight }: { isLight: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
@@ -50,7 +53,7 @@ function PolesMenu() {
         aria-haspopup='menu'
         aria-expanded={isOpen}
         onClick={() => setIsOpen(open => !open)}
-        className={`cursor-pointer flex items-center gap-1 ${linkClass}`}
+        className={`cursor-pointer flex items-center gap-1 ${linkClass(isLight)}`}
       >
         Poles
         <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
@@ -81,7 +84,7 @@ const navLinks = [
   { href: '/photobook', label: 'Photobook' },
 ]
 
-function MobileMenu() {
+function MobileMenu({ isLight }: { isLight: boolean }) {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
@@ -98,7 +101,7 @@ function MobileMenu() {
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isOpen}
         onClick={() => setIsOpen(open => !open)}
-        className='cursor-pointer p-2 -mr-2 text-foreground'
+        className={`cursor-pointer p-2 -mr-2 transition-colors duration-200 ${isLight ? 'text-white' : 'text-foreground'}`}
       >
         {isOpen ? <X className='h-6 w-6' /> : <Menu className='h-6 w-6' />}
       </button>
@@ -128,10 +131,15 @@ function GlassyNavbar() {
   const [lastScrollY, setLastScrollY] = useState(0)
   // Bumped each time the menu comes back, to replay the logo write-on
   const [logoRevealKey, setLogoRevealKey] = useState(0)
+  // On the home page the bar is transparent over the hero video until it is scrolled past
+  const pathname = usePathname()
+  const [isPastHero, setIsPastHero] = useState(false)
+  const isLight = pathname === '/' && !isPastHero
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
+      setIsPastHero(currentScrollY > window.innerHeight - 80)
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false)
@@ -150,29 +158,29 @@ function GlassyNavbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 bg-white transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+      className={`fixed top-0 inset-x-0 z-50 transition-[transform,background-color] duration-300 ${isLight ? 'bg-transparent' : 'bg-white'} ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <nav className='container-custom flex items-center justify-between h-16 md:h-[72px]'>
         <Link href='/' className='cursor-pointer flex items-center'>
           {/* Letters write themselves on load and whenever the menu reappears */}
-          <WriteOnLogo key={logoRevealKey} className='h-6 md:h-7 w-auto' />
+          <WriteOnLogo key={logoRevealKey} className={`h-6 md:h-7 w-auto transition-[filter] duration-300 ${isLight ? 'invert' : ''}`} />
         </Link>
         <div className='hidden md:flex items-center gap-8'>
-          <Link href='/' className={linkClass}>
+          <Link href='/' className={linkClass(isLight)}>
             Home
           </Link>
-          <PolesMenu />
-          <Link href='/events' className={linkClass}>
+          <PolesMenu isLight={isLight} />
+          <Link href='/events' className={linkClass(isLight)}>
             Events
           </Link>
-          <Link href='/genesis' className={linkClass}>
+          <Link href='/genesis' className={linkClass(isLight)}>
             Genesis
           </Link>
-          <Link href='/photobook' className={linkClass}>
+          <Link href='/photobook' className={linkClass(isLight)}>
             Photobook
           </Link>
         </div>
-        <MobileMenu />
+        <MobileMenu isLight={isLight} />
       </nav>
     </header>
   )
